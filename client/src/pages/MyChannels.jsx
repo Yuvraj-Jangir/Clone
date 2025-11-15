@@ -8,22 +8,20 @@ export default function MyChannels() {
   const [channels, setChannels] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    if (!user) return;
 
-useEffect(() => {
-  if (!user) return;
-
-  axios
-    .get(`${API}/api/channels/owner/${user.id}/all`)
-    .then(({ data }) => {
-      setChannels(data); // now data is an array of channels
-    })
-    .catch((err) => {
-      console.error(err);
-      setChannels([]);
-    })
-    .finally(() => setLoading(false));
-}, [user, API]);
-
+    axios
+      .get(`${API}/api/channels/owner/${user.id}/all`)
+      .then(({ data }) => {
+        setChannels(data); // now data is an array of channels
+      })
+      .catch((err) => {
+        console.error(err);
+        setChannels([]);
+      })
+      .finally(() => setLoading(false));
+  }, [user, API]);
 
   if (!user) return <p>Please sign in to view your channels.</p>;
   if (loading) return <p>Loading your channels...</p>;
