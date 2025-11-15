@@ -1,16 +1,53 @@
-# React + Vite
+YouTube Clone - React Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# YouTube Clone Frontend (React)
 
-Currently, two official plugins are available:
+This is the frontend of the YouTube Clone project built using React and Vite.  
+It provides the UI/UX for browsing, searching, watching, and managing videos and channels.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- Home Page with video grid, search bar, and filter buttons
+- Video Player Page with like/dislike and comment functionality
+- Channel Page: Create/Edit/Delete videos
+- My Channels: View all channels created by the logged-in user
+- Responsive design for desktop and mobile
+- Beautiful UI inspired by YouTube
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+##
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+├── client/
+│   ├── src/
+│       ├── components/(VideoCard.jsx)
+│       ├── context/(AuthContext.jsx)
+│       ├── pages/(Channel.jsx, CreateChannel.jsx, Home.jsx, MyChannel.jsx, SignIn.jsx, Watch.jsx)
+│       ├── utils/(dsa.js)
+|       ├── App.css
+|       ├── styles.css
+│       ├── App.jsx
+│       └── main.jsx
+│───── index.html
+│───── package-lock.json
+│───── package.json
+|───── README.md
+
+## Technologies Used
+
+- React
+- React Router
+- React icons
+- React Router DOM
+- Axios
+- Tailwind CSS
+- JavaScript
+
+## Setup
+
+1. Clone
+   git clone https://github.com/Yuvraj-Jangir/Clone.git
+
+2. Install dependencies:
+
+   cd client
+   npm install
