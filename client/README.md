@@ -16,20 +16,30 @@ It provides the UI/UX for browsing, searching, watching, and managing videos and
 
 ##
 
-├── client/
-│ ├── src/
-│ ├── components/(VideoCard.jsx)
-│ ├── context/(AuthContext.jsx)
-│ ├── pages/(Channel.jsx, CreateChannel.jsx, Home.jsx, MyChannel.jsx, SignIn.jsx, Watch.jsx)
-│ ├── utils/(dsa.js)
-| ├── App.css
-| ├── styles.css
-│ ├── App.jsx
-│ └── main.jsx
-│───── index.html
-│───── package-lock.json
-│───── package.json
-|───── README.md
+client/
+├── src/
+│   ├── components/
+│   │   └── VideoCard.jsx
+│   ├── context/
+│   │   └── AuthContext.jsx
+│   ├── pages/
+│   │   ├── Channel.jsx
+│   │   ├── CreateChannel.jsx
+│   │   ├── Home.jsx
+│   │   ├── MyChannel.jsx
+│   │   ├── SignIn.jsx
+│   │   └── Watch.jsx
+│   ├── utils/
+│   │   └── dsa.js
+│   ├── App.css
+│   ├── styles.css
+│   ├── App.jsx
+│   └── main.jsx
+├── index.html
+├── package-lock.json
+├── package.json
+└── README.md
+
 
 ## Technologies Used
 

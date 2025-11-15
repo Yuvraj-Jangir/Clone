@@ -58,15 +58,28 @@ Copy this code
 
 ## File Structure
 
-├── server/
-│ ├── models/(Channel.js, Comment.js, User.js, Video.js)
-│ ├── routes/(auth.js, channels.js, comments.js, videos.js)
-│ ├── middleware/(auth.js)
-│ ├── seed/(react.mp4, seed.js)
-│ ├── utils/(dsa.js)
-│ ├── .env
-│ ├── server.js
-│ ├── package.json
-└─└── README.md
+server/
+├── models/
+│   ├── Channel.js
+│   ├── Comment.js
+│   ├── User.js
+│   └── Video.js
+├── routes/
+│   ├── auth.js
+│   ├── channels.js
+│   ├── comments.js
+│   └── videos.js
+├── middleware/
+│   └── auth.js
+├── seed/
+│   ├── react.mp4
+│   └── seed.js
+├── utils/
+│   └── dsa.js
+├── .env
+├── server.js
+├── package.json
+└── README.md
+
 
 
