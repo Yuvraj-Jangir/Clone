@@ -30,8 +30,14 @@ router.get("/:id", async(req, res) => {
 });
 
 router.post("/", requireAuth, async(req, res) => {
-    const { title, description, videoUrl, thumbnailUrl, channel, categories = [] } =
-    req.body;
+    const {
+        title,
+        description,
+        videoUrl,
+        thumbnailUrl,
+        channel,
+        categories = [],
+    } = req.body;
     const v = await Video.create({
         title,
         description,
