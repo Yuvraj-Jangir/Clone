@@ -21,8 +21,12 @@ It provides API endpoints for users, channels, videos, and comments.
 - JWT for authentication
 
 ## Setup
+## Clone 
+    git clone https://github.com/Yuvraj-Jangir/Clone.git
+
 
 1. Install dependencies:
+    cd clone
     cd server
     npm install
     

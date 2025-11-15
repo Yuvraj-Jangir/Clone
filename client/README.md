@@ -47,7 +47,7 @@ It provides the UI/UX for browsing, searching, watching, and managing videos and
    git clone https://github.com/Yuvraj-Jangir/Clone.git
 
 2. Install dependencies:
-
+   cd clone
    cd client
    npm install
 
