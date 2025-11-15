@@ -17,11 +17,11 @@ export default function SignIn() {
     try {
       if (mode === "register") {
         if (!username || username.length < 3)
-          throw new Error("Username must be at least 3 characters");
+          throw new Error("Username must be at least 6 characters long");
         if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email))
           throw new Error("Enter a valid email");
         if (password.length < 6)
-          throw new Error("Password must be at least 6 characters");
+          throw new Error("Password must be at least 6 characters long");
         await register(username, email, password);
         setMode("login");
       } else {
@@ -36,7 +36,7 @@ export default function SignIn() {
   return (
     <div className="container">
       <div className="card" style={{ maxWidth: 420, margin: "40px auto", padding: 16 }}>
-        <h2 style={{ textAlign: "center" }}>uTube</h2>
+        <h2 style={{ textAlign: "center" }}>YoutubeClone</h2>
         <div className="row" style={{ justifyContent: "center", gap: 8, marginBottom: 12 }}>
           <button className={"btn " + (mode === "login" ? "primary" : "")} onClick={() => setMode("login")}>
             Sign in
@@ -54,8 +54,7 @@ export default function SignIn() {
           {error && <div style={{ color: "tomato" }}>{error}</div>}
           <button className="btn primary">{mode === "register" ? "Create account" : "Sign in"}</button>
         </form>
-        <p style={{ color: "var(--muted)", fontSize: 12, marginTop: 8, textAlign: "center" }}>
-          This is a demo "Google-style" form (no OAuth).
+        <p style={{ color: "blue", fontSize: 12, marginTop: 8, textAlign: "center" }}>
         </p>
       </div>
     </div>

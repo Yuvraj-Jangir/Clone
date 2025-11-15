@@ -54,7 +54,7 @@ export default function Watch() {
       <video className="video" controls src={v.videoUrl} />
       <div className="meta">
         <h2>{v.title}</h2>
-        <div style={{ color: "var(--muted)" }}>
+        <div style={{ color: "blue" }}>
           {v.channel?.channelName} • {v.views} views
         </div>
         <p>{v.description}</p>

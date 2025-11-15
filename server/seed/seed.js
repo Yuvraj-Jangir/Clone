@@ -33,22 +33,22 @@ async function run() {
     });
 
     const sampleVideos = [{
-            title: "JavaScript Crash Course",
-            description: "Quick intro to JavaScript basics.",
-            videoUrl: "http://localhost:5001/videos/javascript.mp4",
-            thumbnailUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/500px-JavaScript-logo.png",
-            categories: ["Programming", "JavaScript", "Frontend", "Tutorial"],
+            title: "Learn React in 30 Minutes",
+            description: "A quick tutorial to get started with React.",
+            videoUrl: "http://localhost:5001/videos/react.mp4",
+            thumbnailUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
+            categories: ["Programming", "Frontend", "React", "Education"],
         },
         {
-            title: "Express.js Deep Dive",
-            description: "Learn how to build backend APIs with Express.js.",
-            videoUrl: "http://localhost:5001/videos/express.mp4",
-            thumbnailUrl: "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
-            categories: ["Programming", "Backend", "Express", "Node"],
+            title: "Learn React in 30 Minutes",
+            description: "A quick tutorial to get started with React.",
+            videoUrl: "http://localhost:5001/videos/react.mp4",
+            thumbnailUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
+            categories: ["Programming", "Frontend", "React", "Education"],
         },
         {
-            title: "React Tutorial",
-            description: "Understand React fundamentals step by step.",
+            title: "Learn React in 30 Minutes",
+            description: "A quick tutorial to get started with React.",
             videoUrl: "http://localhost:5001/videos/react.mp4",
             thumbnailUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
             categories: ["Programming", "Frontend", "React", "Education"],
@@ -74,7 +74,7 @@ async function run() {
         text: "Great video! Very helpful.",
     });
 
-    console.log("Seeded ✔");
+    console.log("Seeded");
     process.exit(0);
 }
 

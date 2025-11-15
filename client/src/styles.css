@@ -3,8 +3,7 @@
 :root {
     --bg: #fff6f6;
     --text: #000000;
-    --muted: #0055ff;
-    --card: #ffffff;
+    --cardBackground: #ffffff;
     --coloring: #b90000;
     --border: #bbbbbb;
 }
@@ -57,7 +56,7 @@ a {
 }
 
 .btn {
-    background: var(--card);
+    background: var(--cardBackground);
     border: 1px solid var(--border);
     padding: 10px 14px;
     border-radius: 12px;
@@ -121,7 +120,7 @@ a {
 }
 
 .card {
-    background: var(--card);
+    background: var(--cardBackground);
     border: 1px solid var(--border);
     border-radius: 16px;
     overflow: hidden;
@@ -260,7 +259,7 @@ a {
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 12px;
-    background: var(--card);
+    background: var(--cardBackground);
     transition: 0.2s;
 }
 
@@ -295,7 +294,7 @@ a {
 }
 
 .modal {
-    background: var(--card);
+    background: var(--cardBackground);
     border-radius: 12px;
     padding: 24px;
     width: 400px;
