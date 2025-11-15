@@ -57,7 +57,6 @@ router.get("/mychannels", requireAuth, async(req, res) => {
     }
 });
 
-
 router.get("/owner/:ownerId/all", async(req, res) => {
     try {
         const channels = await Channel.find({ owner: req.params.ownerId });
@@ -66,7 +65,5 @@ router.get("/owner/:ownerId/all", async(req, res) => {
         res.status(500).json({ message: err.message });
     }
 });
-
-
 
 export default router;
