@@ -15,7 +15,7 @@ It provides the UI/UX for browsing, searching, watching, and managing videos and
 - Beautiful UI inspired by YouTube
 
 ##
-
+```
 client/
 ├── src/
 │   ├── components/
@@ -39,7 +39,7 @@ client/
 ├── package-lock.json
 ├── package.json
 └── README.md
-
+```
 
 ## Technologies Used
 
