@@ -57,7 +57,7 @@ Copy this code
     POST /api/channels – Create channel (auth required)
 
 ## File Structure
-
+```
 server/
 ├── models/
 │   ├── Channel.js
@@ -80,6 +80,6 @@ server/
 ├── server.js
 ├── package.json
 └── README.md
-
+```
 
 
