@@ -214,8 +214,6 @@
 //   );
 // }
 
-
-
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -250,7 +248,12 @@ export default function Channel() {
   }, [id]);
 
   if (loading) return <div className="container">Loading...</div>;
-  if (!info) return <div className="container"><p>Channel not found.</p></div>;
+  if (!info)
+    return (
+      <div className="container">
+        <p>Channel not found.</p>
+      </div>
+    );
 
   const canManage = user && info.owner === user.id;
 
@@ -311,7 +314,10 @@ export default function Channel() {
 
       {/* Videos Grid */}
       <h3>Videos</h3>
-      <div className="grid" style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
+      <div
+        className="grid"
+        style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}
+      >
         {videos.map((v) => (
           <div key={v._id} className="card" style={{ width: "250px" }}>
             <a href={"/watch/" + v._id}>
@@ -327,15 +333,26 @@ export default function Channel() {
               />
             </a>
             <div className="p" style={{ padding: "8px 0" }}>
-              <div style={{ fontWeight: 600, marginLeft: "20px" }}>{v.title}</div>
+              <div style={{ fontWeight: 600, marginLeft: "20px" }}>
+                {v.title}
+              </div>
 
               {/* Edit/Delete buttons */}
               {canManage && (
-                <div style={{ marginTop: 8, display: "flex", gap: 8,justifyContent: "center" }}>
+                <div
+                  style={{
+                    marginTop: 8,
+                    display: "flex",
+                    gap: 8,
+                    justifyContent: "center",
+                  }}
+                >
                   <button
                     className="btn"
                     onClick={() =>
-                      setEditingVideoId((prev) => (prev === v._id ? null : v._id))
+                      setEditingVideoId((prev) =>
+                        prev === v._id ? null : v._id
+                      )
                     }
                   >
                     {editingVideoId === v._id ? "Cancel" : "Edit"}
