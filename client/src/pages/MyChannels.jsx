@@ -9,28 +9,6 @@ export default function MyChannels() {
   const [loading, setLoading] = useState(true);
 
 
-
-
-//   useEffect(() => {
-//     if (!user) return;
-
-//     axios
-//       .get(`${API}/api/channels/owner/${user.id}`)
-//       .then(({ data }) => {
-//         // Ensure we always have an array
-//         const chArray = Array.isArray(data) ? data : data ? [data] : [];
-//         setChannels(chArray);
-//       })
-//       .catch((err) => {
-//         console.error(err);
-//         setChannels([]);
-//       })
-//       .finally(() => setLoading(false));
-//   }, [user, API]);
-
-
-
-
 useEffect(() => {
   if (!user) return;
 
