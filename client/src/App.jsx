@@ -10,6 +10,7 @@ import { AuthProvider, useAuth } from "./context/AuthContext";
 import axios from "axios";
 import { Trie, debounce } from "./utils/dsa";
 import { AiFillYoutube } from "react-icons/ai";
+import { FaSearch } from "react-icons/fa";
 
 function Header({ onToggleSidebar }) {
   const [q, setQ] = useState("");
@@ -91,7 +92,7 @@ function Header({ onToggleSidebar }) {
             </ul>
           )}
         </div>
-        <button className="btn">Search</button>
+        <button className="btn" style={{alignItems:"center"}}><FaSearch /></button>
       </form>
 
       {/* User actions */}
