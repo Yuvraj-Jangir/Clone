@@ -92,7 +92,9 @@ function Header({ onToggleSidebar }) {
             </ul>
           )}
         </div>
-        <button className="btn" style={{alignItems:"center"}}><FaSearch /></button>
+        <button className="btn" style={{ alignItems: "center" }}>
+          <FaSearch />
+        </button>
       </form>
 
       {/* User actions */}
