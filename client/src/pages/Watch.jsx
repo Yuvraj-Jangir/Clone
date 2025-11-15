@@ -102,7 +102,6 @@
 //   );
 // }
 
-
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
@@ -125,7 +124,9 @@ export default function Watch() {
 
     // Fetch other videos from the same channel
     if (data.channel?._id) {
-      const other = await axios.get(`${API}/api/channels/${data.channel._id}/videos`);
+      const other = await axios.get(
+        `${API}/api/channels/${data.channel._id}/videos`
+      );
       setOtherVideos(other.data.filter((vid) => vid._id !== id)); // exclude current video
     }
   }
@@ -158,7 +159,9 @@ export default function Watch() {
 
   async function deleteComment(cid) {
     if (!confirm("Delete?")) return;
-    await axios.delete(API + "/api/comments/" + cid, { headers: authHeaders() });
+    await axios.delete(API + "/api/comments/" + cid, {
+      headers: authHeaders(),
+    });
     await load();
   }
 
@@ -178,7 +181,12 @@ export default function Watch() {
     <div className="container" style={{ display: "flex", gap: 24 }}>
       {/* Main Video */}
       <div style={{ flex: 2 }}>
-        <video className="video" controls src={v.videoUrl} style={{ width: "100%" }} />
+        <video
+          className="video"
+          controls
+          src={v.videoUrl}
+          style={{ width: "100%" }}
+        />
         <div className="meta">
           <h2>{v.title}</h2>
           <div style={{ color: "blue", marginBottom: 12 }}>
@@ -230,7 +238,10 @@ export default function Watch() {
                     <button className="btn" onClick={() => editComment(c._id)}>
                       Edit
                     </button>
-                    <button className="btn" onClick={() => deleteComment(c._id)}>
+                    <button
+                      className="btn"
+                      onClick={() => deleteComment(c._id)}
+                    >
                       Delete
                     </button>
                   </div>
