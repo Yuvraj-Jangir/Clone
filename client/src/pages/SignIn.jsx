@@ -35,27 +35,63 @@ export default function SignIn() {
 
   return (
     <div className="container">
-      <div className="card" style={{ maxWidth: 420, margin: "40px auto", padding: 16 }}>
+      <div
+        className="card"
+        style={{ maxWidth: 420, margin: "40px auto", padding: 16 }}
+      >
         <h2 style={{ textAlign: "center" }}>YoutubeClone</h2>
-        <div className="row" style={{ justifyContent: "center", gap: 8, marginBottom: 12 }}>
-          <button className={"btn " + (mode === "login" ? "primary" : "")} onClick={() => setMode("login")}>
+        <div
+          className="row"
+          style={{ justifyContent: "center", gap: 8, marginBottom: 12 }}
+        >
+          <button
+            className={"btn " + (mode === "login" ? "primary" : "")}
+            onClick={() => setMode("login")}
+          >
             Sign in
           </button>
-          <button className={"btn " + (mode === "register" ? "primary" : "")} onClick={() => setMode("register")}>
+          <button
+            className={"btn " + (mode === "register" ? "primary" : "")}
+            onClick={() => setMode("register")}
+          >
             Register
           </button>
         </div>
         <form onSubmit={onSubmit} style={{ display: "grid", gap: 8 }}>
           {mode === "register" && (
-            <input className="input" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
+            <input
+              className="input"
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
           )}
-          <input className="input" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-          <input className="input" placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <input
+            className="input"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            className="input"
+            placeholder="Password"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
           {error && <div style={{ color: "tomato" }}>{error}</div>}
-          <button className="btn primary">{mode === "register" ? "Create account" : "Sign in"}</button>
+          <button className="btn primary">
+            {mode === "register" ? "Create account" : "Sign in"}
+          </button>
         </form>
-        <p style={{ color: "blue", fontSize: 12, marginTop: 8, textAlign: "center" }}>
-        </p>
+        <p
+          style={{
+            color: "blue",
+            fontSize: 12,
+            marginTop: 8,
+            textAlign: "center",
+          }}
+        ></p>
       </div>
     </div>
   );
