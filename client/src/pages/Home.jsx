@@ -28,7 +28,8 @@ export default function Home() {
     const fetch = async () => {
       const url = new URL(API + "/api/videos");
       if (q) url.searchParams.set("search", q);
-      if (category && category !== "All") url.searchParams.set("category", category);
+      if (category && category !== "All")
+        url.searchParams.set("category", category);
       const { data } = await axios.get(url.toString());
       setList(quickSort(data, (a, b) => (b.views || 0) - (a.views || 0)));
     };
@@ -39,7 +40,11 @@ export default function Home() {
     <div>
       <div className="chips">
         {CATS.map((c) => (
-          <button key={c} onClick={() => setCategory(c)} className={"chip " + (category === c ? "active" : "")}>
+          <button
+            key={c}
+            onClick={() => setCategory(c)}
+            className={"chip " + (category === c ? "active" : "")}
+          >
             {c}
           </button>
         ))}

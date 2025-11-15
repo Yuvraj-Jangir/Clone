@@ -8,7 +8,9 @@ export const useAuth = () => useContext(Ctx);
 export function AuthProvider({ children }) {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [user, setUser] = useState(
-    localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : null
+    localStorage.getItem("user")
+      ? JSON.parse(localStorage.getItem("user"))
+      : null
   );
 
   useEffect(() => {
@@ -26,7 +28,10 @@ export function AuthProvider({ children }) {
   }
 
   async function login(email, password) {
-    const { data } = await axios.post(API + "/api/auth/login", { email, password });
+    const { data } = await axios.post(API + "/api/auth/login", {
+      email,
+      password,
+    });
     // backend login already returns user with id and channelId
     setToken(data.token);
 
