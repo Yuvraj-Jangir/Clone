@@ -25,6 +25,7 @@ It provides API endpoints for users, channels, videos, and comments.
 1. Install dependencies:
     cd server
     npm install
+    
 
 ## Create a .env file with:
 Copy this code
@@ -33,6 +34,7 @@ Copy this code
     JWT_SECRET=your_secret_key
 
 ## Start the server:
+    npm run seed
     npm run dev
     The server will run at http://localhost:5001
 
