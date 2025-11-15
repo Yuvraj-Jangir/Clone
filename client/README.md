@@ -50,3 +50,7 @@ It provides the UI/UX for browsing, searching, watching, and managing videos and
 
    cd client
    npm install
+
+3. Start the development server
+   npm run dev
+   Open your browser at http://localhost:5173
